@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en" class="bg-gray-900">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- daisyui link  -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .mm-modal {
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.60);
+            z-index: 100;
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+
+        .mm-border {
+            border-color: white;
+            animation: bordermm 1s infinite;
+        }
+
+        @keyframes bordermm {
+            0% {
+                border-color: rgb(0, 0, 0);
+            }
+
+            50% {
+                border-color: rgb(255, 255, 255);
+            }
+
+            100% {
+                border-color: rgb(0, 0, 0);
+            }
+
+        }
+
+        .text-color {
+            animation: colromm 4s infinite;
+        }
+
+        @keyframes colromm {
+
+            0% {
+                color: rgb(188, 0, 0);
+            }
+
+            33% {
+                color: rgb(0, 153, 255);
+            }
+
+            66% {
+                color: rgb(0, 179, 63);
+            }
+
+            100% {
+                color: rgb(188, 0, 0);
+
+            }
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- <i class="fa-solid fa-user-secret"></i>
+    <i class="fa-solid fa-crown"></i> -->
+
+    <div class="flex w-[300px] mx-auto my-8 items-center justify-between">
+
+        <div class="w-[50px] h-[50px] bg-white rounded-full flex items-center justify-center">
+            <i id="user1-icon" class=" text-3xl text-black fa-solid fa-user-tie "></i>
+        </div><!--user-->
+        <button id="btn-restart" class="btn btn-success ">Play again</button>
+
+        <div class="w-[50px] h-[50px] bg-white rounded-full flex items-center justify-center">
+            <i id="user2-icon" class=" text-3xl text-black fa-solid fa-user-tie"></i>
+        </div><!--user-->
+
+    </div><!--user contaier -->
+    <div id="main-container"
+        class="grid grid-cols-3 grid-rows-3 w-[300px]  h-[300px] p-3 gap-3 rounded-lg  mx-auto  bg-white">
+
+        <div id="box-1" class="col-span-1 border-2 border-gray-400 rounded-md cursor-pointer mm-box">
+            <div class=" mm-box-click  w-full h-full flex justify-center items-center  ">
+                <div class="rating rating-md">
+                    <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-600" />
+                </div>
+            </div>
+        </div><!-- col-->
+
+        <div id="box-2" class="col-span-1 border-2 border-gray-400 rounded-md cursor-pointer mm-box ">
+            <div class=" mm-box-click w-full h-full flex justify-center items-center ">
+                <div class="rating rating-md">
+                    <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-600" />
+                </div>
+            </div>
+        </div><!-- col-->
+
+        <div id="box-3" class="col-span-1 border-2 border-gray-400 rounded-md cursor-pointer mm-box">
+            <div class="mm-box-click w-full h-full flex justify-center items-center rounded-sm">
+                <div class="rating rating-md">
+                    <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-600" />
+                </div>
+            </div>
+        </div><!-- col-->
+
+        <div id="box-4" class="col-span-1 border-2 border-gray-400 rounded-md cursor-pointer mm-box">
+            <div class=" mm-box-click  w-full h-full flex justify-center items-center  ">
+                <div class="rating rating-md">
+                    <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-600" />
+                </div>
+            </div>
+        </div><!-- col-->
+
+        <div id="box-5" class="col-span-1 border-2 border-gray-400 rounded-md cursor-pointer mm-box">
+            <div class=" mm-box-click w-full h-full flex justify-center items-center  ">
+                <div class="rating rating-md">
+                    <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-600" />
+                </div>
+            </div>
+        </div><!-- col-->
+
+        <div id="box-6" class="col-span-1 border-2 border-gray-400 rounded-md cursor-pointer mm-box">
+            <div class=" mm-box-click w-full h-full flex justify-center items-center  ">
+                <div class="rating rating-md">
+                    <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-600" />
+                </div>
+            </div>
+        </div><!-- col-->
+
+        <div id="box-7" class="col-span-1 border-2 border-gray-400 rounded-md cursor-pointer mm-box">
+            <div class=" mm-box-click   w-full h-full flex justify-center items-center  ">
+                <div class="rating rating-md">
+                    <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-600" />
+                </div>
+            </div>
+        </div><!-- col-->
+
+        <div id="box-8" class="col-span-1 border-2 border-gray-400 rounded-md cursor-pointer mm-box">
+            <div class=" mm-box-click  w-full h-full flex justify-center items-center  ">
+                <div class="rating rating-md">
+                    <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-600" />
+                </div>
+            </div>
+        </div><!-- col-->
+
+        <div id="box-9" class="col-span-1 border-2 border-gray-400 rounded-md cursor-pointer mm-box">
+            <div class=" mm-box-click  w-full h-full flex justify-center items-center  ">
+                <div class="rating rating-md">
+                    <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-600" />
+                </div>
+            </div>
+        </div><!-- col-->
+    </div><!-- box contaienr-->
+
+
+    <!-- ========================================= modal ================================================ -->
+    <!-- ========================================= modal ================================================ -->
+    <div id="mm-modal" class="mm-modal hidden">
+        <div class="w-full h-full flex justify-center items-center">
+            <div
+                class="w-[300px] mx-auto bg-white rounded-lg p-4 flex flex-col items-center justify-center gap-3 text-black text-center">
+                <figure>
+                    <img id="img" class="h-[100px]" src="image/congratulation.png" alt="">
+                </figure>
+                <p class="text-2xl text-center ">
+                    <span id="user-name" class="  uppercase text-green-500 font-medium">Mahim</span>
+                    <span id="congragtulation-text"> you win! Congratulations!"</span>
+                </p>
+                <p class="text-gray-500">Do you want to play again</p>
+                <div class="flex gap-6">
+                    <button id="ok-btn" class="bg-green-600 btn border-0 outline-0 text-white font-semibold">OK</button>
+                    <button id="no-btn" class="bg-red-600 btn border-0 outline-0 text-white font-semibold">NO</button>
+                </div>
+            </div>
+        </div>
+    </div><!-- modal-->
+
+    <!-- <div class="flex w-[300px] mx-auto my-8 justify-between">
+        <button id="btn-restart" class="btn btn-success ">Play again</button>
+        <button id="btn" class="btn btn-success">Pause</button>
+    </div>btn contaienr -->
+
+    <script src="script.js"></script>
+    <script src="btn.js"></script>
+</body>
+
+</html>
